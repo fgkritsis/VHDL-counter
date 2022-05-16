@@ -1,0 +1,33 @@
+|presetable_updown_counter
+clk => count[3].CLK
+clk => count[2].CLK
+clk => count[1].CLK
+clk => count[0].CLK
+clk => rco~reg0.CLK
+reset => count[3].ALOAD
+reset => count[2].ALOAD
+reset => count[1].ALOAD
+reset => count[0].ALOAD
+reset => rco~reg0.ENA
+enb => rco~1.OUTPUTSELECT
+enb => count[3].ENA
+enb => count[2].ENA
+enb => count[1].ENA
+enb => count[0].ENA
+ud => count~3.OUTPUTSELECT
+ud => count~2.OUTPUTSELECT
+ud => count~1.OUTPUTSELECT
+ud => count~0.OUTPUTSELECT
+ud => p~0.IN0
+ud => p~1.IN1
+in_data[0] => count[0].ADATA
+in_data[1] => count[1].ADATA
+in_data[2] => count[2].ADATA
+in_data[3] => count[3].ADATA
+out_data[0] <= count[0].DB_MAX_OUTPUT_PORT_TYPE
+out_data[1] <= count[1].DB_MAX_OUTPUT_PORT_TYPE
+out_data[2] <= count[2].DB_MAX_OUTPUT_PORT_TYPE
+out_data[3] <= count[3].DB_MAX_OUTPUT_PORT_TYPE
+rco <= rco~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
